@@ -1,0 +1,279 @@
+{
+    "contributors": null, 
+    "coordinates": null, 
+    "created_at": "Thu Feb 01 18:05:30 +0000 2018", 
+    "entities": {
+        "hashtags": [], 
+        "symbols": [], 
+        "urls": [], 
+        "user_mentions": [
+            {
+                "id": 441470265, 
+                "id_str": "441470265", 
+                "indices": [
+                    3, 
+                    15
+                ], 
+                "name": "Neboj\u0161a Markovi\u0107", 
+                "screen_name": "MarkovicNeb"
+            }
+        ]
+    }, 
+    "favorite_count": 0, 
+    "favorited": false, 
+    "filter_level": "low", 
+    "geo": null, 
+    "id": 959125569194610690, 
+    "id_str": "959125569194610690", 
+    "in_reply_to_screen_name": null, 
+    "in_reply_to_status_id": null, 
+    "in_reply_to_status_id_str": null, 
+    "in_reply_to_user_id": null, 
+    "in_reply_to_user_id_str": null, 
+    "is_quote_status": false, 
+    "lang": "en", 
+    "place": null, 
+    "quote_count": 0, 
+    "reply_count": 0, 
+    "retweet_count": 0, 
+    "retweeted": false, 
+    "retweeted_status": {
+        "contributors": null, 
+        "coordinates": null, 
+        "created_at": "Wed Jan 31 21:54:28 +0000 2018", 
+        "display_text_range": [
+            0, 
+            140
+        ], 
+        "entities": {
+            "hashtags": [], 
+            "symbols": [], 
+            "urls": [
+                {
+                    "display_url": "twitter.com/i/web/status/9\u2026", 
+                    "expanded_url": "https://twitter.com/i/web/status/958820805529473024", 
+                    "indices": [
+                        117, 
+                        140
+                    ], 
+                    "url": "https://t.co/VcBVtWCkvf"
+                }
+            ], 
+            "user_mentions": []
+        }, 
+        "extended_tweet": {
+            "display_text_range": [
+                0, 
+                138
+            ], 
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            125, 
+                            130
+                        ], 
+                        "text": "MUFC"
+                    }, 
+                    {
+                        "indices": [
+                            131, 
+                            138
+                        ], 
+                        "text": "TOTMUN"
+                    }
+                ], 
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/cKdf1BDE1r", 
+                        "expanded_url": "https://twitter.com/MarkovicNeb/status/958820805529473024/photo/1", 
+                        "id": 958820793491886080, 
+                        "id_str": "958820793491886080", 
+                        "indices": [
+                            139, 
+                            162
+                        ], 
+                        "media_url": "http://pbs.twimg.com/media/DU5qbn9XkAANJk0.jpg", 
+                        "media_url_https": "https://pbs.twimg.com/media/DU5qbn9XkAANJk0.jpg", 
+                        "sizes": {
+                            "large": {
+                                "h": 540, 
+                                "resize": "fit", 
+                                "w": 960
+                            }, 
+                            "medium": {
+                                "h": 540, 
+                                "resize": "fit", 
+                                "w": 960
+                            }, 
+                            "small": {
+                                "h": 383, 
+                                "resize": "fit", 
+                                "w": 680
+                            }, 
+                            "thumb": {
+                                "h": 150, 
+                                "resize": "crop", 
+                                "w": 150
+                            }
+                        }, 
+                        "type": "photo", 
+                        "url": "https://t.co/cKdf1BDE1r"
+                    }
+                ], 
+                "symbols": [], 
+                "urls": [], 
+                "user_mentions": []
+            }, 
+            "extended_entities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/cKdf1BDE1r", 
+                        "expanded_url": "https://twitter.com/MarkovicNeb/status/958820805529473024/photo/1", 
+                        "id": 958820793491886080, 
+                        "id_str": "958820793491886080", 
+                        "indices": [
+                            139, 
+                            162
+                        ], 
+                        "media_url": "http://pbs.twimg.com/media/DU5qbn9XkAANJk0.jpg", 
+                        "media_url_https": "https://pbs.twimg.com/media/DU5qbn9XkAANJk0.jpg", 
+                        "sizes": {
+                            "large": {
+                                "h": 540, 
+                                "resize": "fit", 
+                                "w": 960
+                            }, 
+                            "medium": {
+                                "h": 540, 
+                                "resize": "fit", 
+                                "w": 960
+                            }, 
+                            "small": {
+                                "h": 383, 
+                                "resize": "fit", 
+                                "w": 680
+                            }, 
+                            "thumb": {
+                                "h": 150, 
+                                "resize": "crop", 
+                                "w": 150
+                            }
+                        }, 
+                        "type": "photo", 
+                        "url": "https://t.co/cKdf1BDE1r"
+                    }
+                ]
+            }, 
+            "full_text": "Romelu Lukaku against Top 6 sides in 2017-18:\n\n540 minutes\n0 goals\n1 assist\n4 shots on target\n59/111 completed passes (53%)\n\n#MUFC #TOTMUN https://t.co/cKdf1BDE1r"
+        }, 
+        "favorite_count": 385, 
+        "favorited": false, 
+        "filter_level": "low", 
+        "geo": null, 
+        "id": 958820805529473024, 
+        "id_str": "958820805529473024", 
+        "in_reply_to_screen_name": null, 
+        "in_reply_to_status_id": null, 
+        "in_reply_to_status_id_str": null, 
+        "in_reply_to_user_id": null, 
+        "in_reply_to_user_id_str": null, 
+        "is_quote_status": false, 
+        "lang": "en", 
+        "place": null, 
+        "possibly_sensitive": false, 
+        "quote_count": 110, 
+        "reply_count": 34, 
+        "retweet_count": 312, 
+        "retweeted": false, 
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>", 
+        "text": "Romelu Lukaku against Top 6 sides in 2017-18:\n\n540 minutes\n0 goals\n1 assist\n4 shots on target\n59/111 completed pass\u2026 https://t.co/VcBVtWCkvf", 
+        "truncated": true, 
+        "user": {
+            "contributors_enabled": false, 
+            "created_at": "Tue Dec 20 03:52:34 +0000 2011", 
+            "default_profile": false, 
+            "default_profile_image": false, 
+            "description": "Sports Journalist & Web Writer | Featured @TheFootballPink @Inbedwimaradona @GoaldenTimes & @MozzartSport | Former SOS Kanal | Personal views", 
+            "favourites_count": 15638, 
+            "follow_request_sent": null, 
+            "followers_count": 942, 
+            "following": null, 
+            "friends_count": 693, 
+            "geo_enabled": true, 
+            "id": 441470265, 
+            "id_str": "441470265", 
+            "is_translator": false, 
+            "lang": "sr", 
+            "listed_count": 44, 
+            "location": "Belgrade, Serbia", 
+            "name": "Neboj\u0161a Markovi\u0107", 
+            "notifications": null, 
+            "profile_background_color": "89C9FA", 
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/443164425852182528/k38FEsdc.jpeg", 
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/443164425852182528/k38FEsdc.jpeg", 
+            "profile_background_tile": false, 
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/441470265/1515849157", 
+            "profile_image_url": "http://pbs.twimg.com/profile_images/955390928923000832/BBpHVOYz_normal.jpg", 
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/955390928923000832/BBpHVOYz_normal.jpg", 
+            "profile_link_color": "1B95E0", 
+            "profile_sidebar_border_color": "FFFFFF", 
+            "profile_sidebar_fill_color": "EFEFEF", 
+            "profile_text_color": "333333", 
+            "profile_use_background_image": false, 
+            "protected": false, 
+            "screen_name": "MarkovicNeb", 
+            "statuses_count": 17064, 
+            "time_zone": "Belgrade", 
+            "translator_type": "regular", 
+            "url": null, 
+            "utc_offset": 3600, 
+            "verified": false
+        }
+    }, 
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>", 
+    "text": "RT @MarkovicNeb: Romelu Lukaku against Top 6 sides in 2017-18:\n\n540 minutes\n0 goals\n1 assist\n4 shots on target\n59/111 completed passes (53%\u2026", 
+    "timestamp_ms": "1517508330044", 
+    "truncated": false, 
+    "user": {
+        "contributors_enabled": false, 
+        "created_at": "Fri Jan 18 22:15:05 +0000 2013", 
+        "default_profile": true, 
+        "default_profile_image": false, 
+        "description": "Victoria Concordia Crescit", 
+        "favourites_count": 23013, 
+        "follow_request_sent": null, 
+        "followers_count": 127, 
+        "following": null, 
+        "friends_count": 196, 
+        "geo_enabled": true, 
+        "id": 1102144986, 
+        "id_str": "1102144986", 
+        "is_translator": false, 
+        "lang": "sv", 
+        "listed_count": 3, 
+        "location": null, 
+        "name": "Don D", 
+        "notifications": null, 
+        "profile_background_color": "C0DEED", 
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png", 
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png", 
+        "profile_background_tile": false, 
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1102144986/1514516678", 
+        "profile_image_url": "http://pbs.twimg.com/profile_images/3515714345/17005b620fb763e97512927f7ccbc538_normal.jpeg", 
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/3515714345/17005b620fb763e97512927f7ccbc538_normal.jpeg", 
+        "profile_link_color": "1DA1F2", 
+        "profile_sidebar_border_color": "C0DEED", 
+        "profile_sidebar_fill_color": "DDEEF6", 
+        "profile_text_color": "333333", 
+        "profile_use_background_image": true, 
+        "protected": false, 
+        "screen_name": "Dhanuu9", 
+        "statuses_count": 23163, 
+        "time_zone": null, 
+        "translator_type": "none", 
+        "url": null, 
+        "utc_offset": null, 
+        "verified": false
+    }
+}
