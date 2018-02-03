@@ -28,4 +28,4 @@ if __name__ == '__main__':
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, listener_obj)
 
-    stream.filter(track=['#TOTMUN'])
+    stream.filter(track=['#SAvsIND'])
