@@ -13,19 +13,33 @@ consumer_key_secret = "p3aLTqwfWCaD0onbtZcqcqZzufIg4ZRrTDe9QeXaAXobSQmGXz"
 class StdOutListener(StreamListener):
 
     def on_data(self, data):
-        decoded_data = json.loads(data)
-        f = open('SAvsIND.json', 'wb')
-        json.dump(decoded_data, f, sort_keys=True, indent=4)
+        try:
+            with open('SAvsIND.json', 'a') as f:
+                f.write(data)
+                return True
+            # decoded_data = json.loads(data)
+            # f = open('SAvsIND.json', 'wb')
+            # json.dump(decoded_data, f, sort_keys=True, indent=4)
+        except BaseException as e:
+            print("Error on_data: %s" % str(e))
         return True
 
     def on_error(self, status):
         print status
+        return True
 
 
-if __name__ == '__main__':
-    listener_obj = StdOutListener()
-    auth = OAuthHandler(consumer_key, consumer_key_secret)
-    auth.set_access_token(access_token, access_token_secret)
-    stream = Stream(auth, listener_obj)
 
-    stream.filter(track=['#SAvsIND'])
+
+def start_stream(auth):
+    while True:
+        try:
+            stream = Stream(auth, StdOutListener())
+            stream.filter(track=['#SAvsIND'])
+        except:
+            continue
+
+
+auth = OAuthHandler(consumer_key, consumer_key_secret)
+auth.set_access_token(access_token, access_token_secret)
+start_stream(auth)
