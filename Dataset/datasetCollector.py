@@ -14,7 +14,7 @@ class StdOutListener(StreamListener):
 
     def on_data(self, data):
         try:
-            with open('SAvsIND.json', 'a') as f:
+            with open('UC19WC.json', 'a') as f:
                 f.write(data)
                 return True
             # decoded_data = json.loads(data)
@@ -35,7 +35,7 @@ def start_stream(auth):
     while True:
         try:
             stream = Stream(auth, StdOutListener())
-            stream.filter(track=['#SAvsIND'])
+            stream.filter(track=['UC19CWC','ICCU19CWC','AUSvIND','INDvAUS','UC19WCFinal'])
         except:
             continue
 
