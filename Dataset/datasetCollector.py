@@ -35,7 +35,7 @@ def start_stream(auth):
     while True:
         try:
             stream = Stream(auth, StdOutListener())
-            stream.filter(track=['UC19CWC','ICCU19CWC','AUSvIND','INDvAUS','UC19WCFinal'])
+            stream.filter(track=['UC19CWC','ICCU19CWC','AUSvIND','INDvAUS','UC19WCFinal','U19WorldCupFinal'])
         except:
             continue
 

@@ -17,7 +17,7 @@ csvWriter = csv.writer(csvFile)
 
 
 for tweet in tweepy.Cursor(api.search,q="#SAvIND",\
-                           since="2018-02-07",until="2018-02-07").items():
+                           since="2018-02-06",until="2018-02-07").items():
     #print tweet.created_at, tweet.text
     csvWriter.writerow([tweet.created_at, tweet.text.encode('utf-8')])
 
