@@ -8,12 +8,20 @@
 #---------------------------------------------------------------------
 
 import csv
+import nltk
+import string
+
+#stopWords
+stopWords = nltk.corpus.stopwords.words('english') + list(string.punctuation)
+
+#porterStemmer
+portStem = nltk.stem.PorterStemmer();
 
 tweet = ""
 dat = []
 duplicate =0
-input = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/Dataset collected/TW_RMPSGUCL_15feb_SecRemoved.csv'
-output = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/Dataset collected/TW_RMPSGUCL_15feb_cleanData.csv'
+input = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/originalData/TW_INDSA_13feb.csv'
+output = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv'
 
 
 #read file
@@ -60,10 +68,15 @@ with open(input,'r') as f:
             duplicate=0
             continue
 
+        #tokenization and stemming...
+        ft = [i for i in nltk.word_tokenize(tweet.lower().decode('utf-8').strip()) if i not in stopWords]
+        final_tweet = []
+        for word in ft:
+            final_tweet.append(portStem.stem(word))
 
 
         list.append(t)
-        list.append(tweet)
+        list.append(final_tweet)
         dat.append(list)
 
 
