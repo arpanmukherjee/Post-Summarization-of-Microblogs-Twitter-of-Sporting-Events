@@ -2,8 +2,7 @@ import csv
 import matplotlib.pyplot as plt;plt.rcdefaults()
 import numpy as np
 
-csv_path = "/Users/arpn/Google Drive/Semester2/Information Retrieval/Post-Summarization-of-Microblogs-" \
-           "Twitter-of-Sporting-Events/Dataset/Dataset collected/TW_RMPSGUCL_15feb.csv"
+csv_path = "/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv"
 data_dict = {}
 
 
@@ -40,6 +39,7 @@ def build_data_graph():
     plt.show()
 
 
+
 with open(csv_path, "rb") as file_obj:
     try:
         csv_reader(file_obj)
@@ -47,3 +47,5 @@ with open(csv_path, "rb") as file_obj:
         print("Ignore")
 
 build_data_graph()
+
+
