@@ -1,3 +1,4 @@
+
 ####################################################################
 # IR PROJECT --- POST SUMMARIZATION FOR SPORTING EVENTS FROM MICROBLOGS - TWITTER
 #--------------------------------------------------------------------
@@ -10,6 +11,7 @@
 import csv
 import nltk
 import string
+import io
 
 #stopWords
 stopWords = nltk.corpus.stopwords.words('english') + list(string.punctuation)
@@ -20,13 +22,15 @@ portStem = nltk.stem.PorterStemmer();
 tweet = ""
 dat = []
 duplicate =0
-input = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/originalData/TW_INDSA_13feb.csv'
-output = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv'
-outputMap = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Mapper.csv'
-
+input = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/extras/main_ss.csv'
+output = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/extras/clean_ss.csv'
+outputMap1 = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/extras/mapper1_ss'
+outputMap2 = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/extras/mapper2_ss.csv'
 
 
 mapper = {} #map original tweets to tokenized tweets
+mapping1 = []
+mapping2 = []
 
 #read file
 with open(input,'r') as f:
@@ -43,6 +47,7 @@ with open(input,'r') as f:
         t= row[0]
 
         tweet = row[1]
+
         # remove url
         urlIndex = row[1].find("https")
         if urlIndex!=-1:
@@ -53,7 +58,7 @@ with open(input,'r') as f:
             else:
                 tweet = row[1][:urlIndex] + row[1][nextSpace+1:len(row[1])]
         #print tweet
-
+        origin_tweet = tweet
         #remove retweets
         if tweet.find("RT @")==0:
            continue
@@ -82,19 +87,43 @@ with open(input,'r') as f:
         list.append(t)
         list.append(final_tweet)
         dat.append(list)
-        mapper[row[1]] = final_tweet
-
+        #print ''.join(row[1]).encode('utf-8').strip()
+        #t = ''.join(row[1].decode('utf-8')).join(',').join(final_tweet)
+        #mapping.append(t.encode('utf-8'))
+        #mapping.append(final_tweet)
+        #mapping.append(final_tweet)
+        #mapper[row[1]] = final_tweet
+        # for x in row[1]:
+        #     x = x.encode('utf-8')
+        mapping1.append(row[1])
+        mapping2.append(final_tweet)
 
 #writing to csv
 with open(output,'w+') as f1:
     writer = csv.writer(f1)
     writer.writerows(dat)
 
+print mapper
 
 #writing mapper to csv
-with open(outputMap,'w+') as f1:
-    writer = csv.writer(f1)
-    writer.writerows(mapper)
+# fp = io.open(outputMap1,'w',encoding='utf-8')
+#
+# for k in mapping1:
+#     fp.write(k.encode('utf-8'))
+#     # if i%2 ==0:
+#     #     fp.write(":".decode('utf-8'))
+#     # else:
+#     #     fp.write(";".d)
+#     # i+=1
+#
+# fp.close()
+# # with io.open(outputMap1,'w+',encoding='utf-8') as f1:
+# #     writer = csv.writer(f1)
+# #     writer.writerows(mapping1)
+#
+# with open(outputMap2,'w+') as f1:
+#     writer = csv.writer(f1)
+#     writer.writerows(mapping2)
 
 
 

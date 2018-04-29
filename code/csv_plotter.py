@@ -2,7 +2,7 @@ import csv
 import matplotlib.pyplot as plt;plt.rcdefaults()
 import numpy as np
 
-csv_path = "/Users/arpn/Google Drive/Semester2/Information Retrieval/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv"
+csv_path = "/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv"
 
 data_dict = {}
 

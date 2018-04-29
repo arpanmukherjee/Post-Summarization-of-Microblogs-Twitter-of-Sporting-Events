@@ -5,7 +5,7 @@ import csv
 import math
 
 
-csv_path = "/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv"
+csv_path = "/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/threshold_data.csv"
 #word_list = ['A', 'A', 'B', 'B', 'A', 'C', 'C', 'C', 'C']
 
 n =100
