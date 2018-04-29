@@ -93,4 +93,8 @@ for i in range(k_value):
 #     writer = csv.writer(csv_file)
 #     for j in range(len(Y)):
 #         writer.writerow([Y[j], data[j]])
+<<<<<<< HEAD
 # pca_plot_data(X.toarray(), model.labels_)
+=======
+# pca_plot_data(X.toarray(), model.labels_)
+>>>>>>> 1027958cc99f0b2b18b53a135c62ab53835b3525
