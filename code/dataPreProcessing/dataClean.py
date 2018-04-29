@@ -22,7 +22,11 @@ dat = []
 duplicate =0
 input = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/originalData/TW_INDSA_13feb.csv'
 output = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv'
+outputMap = '/media/adalove/WorkDrive/M.Tech/Sem2/IR/project/project_IR/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Mapper.csv'
 
+
+
+mapper = {} #map original tweets to tokenized tweets
 
 #read file
 with open(input,'r') as f:
@@ -78,6 +82,7 @@ with open(input,'r') as f:
         list.append(t)
         list.append(final_tweet)
         dat.append(list)
+        mapper[row[1]] = final_tweet
 
 
 #writing to csv
@@ -85,6 +90,11 @@ with open(output,'w+') as f1:
     writer = csv.writer(f1)
     writer.writerows(dat)
 
+
+#writing mapper to csv
+with open(outputMap,'w+') as f1:
+    writer = csv.writer(f1)
+    writer.writerows(mapper)
 
 
 
