@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 data_dict = {}
 tweets = []
-csv_path = "/Users/arpn/Google Drive/Semester2/Information Retrieval/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/code/threshold_data.csv"
+csv_path = "/home/iiitd/Desktop/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/threshold_data.csv"
 
 
 def get_tweet(row):
@@ -46,3 +46,13 @@ Y = model.labels_
 unique, counts = np.unique(Y, return_counts=True)
 for i, j in zip(unique, counts):
     print(str(i)+" "+str(j))
+
+data = []
+with open(csv_path, "rb") as file_obj:
+    reader = csv.reader(file_obj)
+    for row in reader:
+        data.append(row[1])
+with open('/home/iiitd/Desktop/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/clustered_data.csv', 'wb') as csv_file:
+    writer = csv.writer(csv_file)
+    for j in range(len(Y)):
+        writer.writerow([Y[j], data[j]])
