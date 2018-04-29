@@ -1,6 +1,29 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+from scipy.sparse import csr_matrix
+import numpy as np
+from sklearn.decomposition import PCA
 from sklearn.metrics import adjusted_rand_score
+
+def pca_plot_data(dataX, dataY):
+    #PCA
+    pca = PCA(n_components=2)
+    dataX_r = pca.fit(dataX).transform(dataX)
+    colours = []
+    for i in range(len(dataY)):
+        colours.append(dataY[i])
+
+    plt.title('Data distribution for different genre')
+    temp_x = []
+    temp_y = []
+    for i in range(len(dataX_r)):
+        temp_x.append(dataX_r[i][0])
+        temp_y.append(dataX_r[i][1])
+    plt.scatter(temp_x, temp_y, c=colours, cmap=plt.cm.get_cmap("jet", 10))
+    plt.colorbar(ticks=range(10), label='Genres')
+    plt.clim(-0.5, 9.5)
+    plt.show()
 
 documents = ["This little kitty came to play when I was eating at a restaurant.",
              "Merley has the best squooshy kitten belly.",
@@ -37,4 +60,4 @@ print(prediction)
 Y = vectorizer.transform(["My cat is hungry."])
 prediction = model.predict(Y)
 print(prediction)
-print model.labels_
+pca_plot_data(X.toarray(), model.labels_)

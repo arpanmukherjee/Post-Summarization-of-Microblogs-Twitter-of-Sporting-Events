@@ -2,7 +2,7 @@ import csv
 import matplotlib.pyplot as plt;plt.rcdefaults()
 import numpy as np
 
-csv_path = "/Users/arpn/Google Drive/Semester2/Information Retrieval/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv"
+csv_path = "/home/iiitd/Desktop/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/TW_INDSA_13feb_Cleaned2.csv"
 
 data_dict = {}
 
@@ -62,7 +62,7 @@ threshold_tweets = {}
 for key in sorted(data_dict.keys()):
     if len(data_dict[key]) > threshold:
         threshold_tweets[key] = data_dict[key]
-with open('threshold_data.csv', 'wb') as csv_file:
+with open('/home/iiitd/Desktop/Post-Summarization-of-Microblogs-Twitter-of-Sporting-Events/Dataset/cleanedData/threshold_data.csv', 'wb') as csv_file:
     writer = csv.writer(csv_file)
     for key in threshold_tweets.keys():
         for j in range(len(threshold_tweets[key])):
