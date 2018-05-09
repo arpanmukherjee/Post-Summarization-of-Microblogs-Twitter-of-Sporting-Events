@@ -6,10 +6,12 @@ import csv
 
 @retry(wait_exponential_multiplier=10000,wait_exponential_max=10000)
 def extract_tweet():
-    access_token = "776985857819422720-fRvqysQzvHB2R9IepsTh8eNh1fu5f5Z"
-    access_token_secret = "NiEZXjD8iPpshNpI6i4uGq5c9jlmHpGNFaXxcFl6EqzwK"
-    consumer_key = "B9xNmyF84ZbPs0Xely8QgHctS"
-    consumer_secret = "pXkN1GBZ9y7V65m57Z5CoiOo9LEGpCyKpQsJ18EcSA7s3bD3tV"
+    
+    # put these values
+    access_token = ""
+    access_token_secret = ""
+    consumer_key = ""
+    consumer_secret = ""
 
     print('in module')
     try:
